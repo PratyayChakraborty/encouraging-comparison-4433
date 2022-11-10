@@ -1,4 +1,4 @@
-package masai.com.Model;
+package com.masai.Model;
 
 public class Faculty {
 	private int Facultyid;

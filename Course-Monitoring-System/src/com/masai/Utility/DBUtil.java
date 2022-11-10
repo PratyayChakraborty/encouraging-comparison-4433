@@ -1,4 +1,4 @@
-package masai.com.Utility;
+package com.masai.Utility;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
