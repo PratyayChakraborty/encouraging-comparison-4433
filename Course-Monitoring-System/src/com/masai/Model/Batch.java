@@ -4,7 +4,7 @@ public class Batch {
 	private int batchId ;
 	private int courseId ;
 	private int facultyId ;
-	private String  numberofStudents ;
+	private int  numberofStudents ;
 	private String batchstartDate;
 	private String  duration ;
 	
@@ -12,7 +12,7 @@ public class Batch {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Batch(int batchId, int courseId, int facultyId, String numberofStudents, String batchstartDate,
+	public Batch(int batchId, int courseId, int facultyId, int numberofStudents, String batchstartDate,
 			String duration) {
 		super();
 		this.batchId = batchId;
@@ -47,11 +47,11 @@ public class Batch {
 		this.facultyId = facultyId;
 	}
 
-	public String getNumberofStudents() {
+	public int getNumberofStudents() {
 		return numberofStudents;
 	}
 
-	public void setNumberofStudents(String numberofStudents) {
+	public void setNumberofStudents(int numberofStudents) {
 		this.numberofStudents = numberofStudents;
 	}
 

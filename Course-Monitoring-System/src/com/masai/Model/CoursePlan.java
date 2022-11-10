@@ -1,17 +1,17 @@
 package com.masai.Model;
 
-public class CoursePlane {
+public class CoursePlan {
 	private int planId;
 	private int batchId;
 	private int Daynumber;
 	private String Topic;
 	private boolean status;
 	
-	public CoursePlane() {
+	public CoursePlan() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public CoursePlane(int planId, int batchId, int daynumber, String topic, boolean status) {
+	public CoursePlan(int planId, int batchId, int daynumber, String topic, boolean status) {
 		super();
 		this.planId = planId;
 		this.batchId = batchId;

@@ -47,8 +47,8 @@ public class Faculty {
 		return Facultyaddress;
 	}
 
-	public void setFacultyaddress(String facultyaddress) {
-		Facultyaddress = facultyaddress;
+	public void setFacultyaddress(String id) {
+		Facultyaddress = id;
 	}
 
 	public String getMobile() {
