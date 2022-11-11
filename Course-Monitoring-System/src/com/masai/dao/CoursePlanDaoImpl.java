@@ -121,8 +121,10 @@ public class CoursePlanDaoImpl implements CoursePlanDao{
 		Scanner sc=new Scanner(System.in);
 		System.out.println("enter planid");
 		int pid=sc.nextInt();
-		System.out.println("enter status 0/1");
-		String topic=sc.next();
+		System.out.println("enter topic");
+		sc.nextLine();
+		String topic=sc.nextLine();
+		
 		try(Connection conn=DBUtil.provConnection()){
 			PreparedStatement ps=conn.prepareStatement("update courseplan set topic=? where planid=?");
 			
@@ -132,7 +134,7 @@ public class CoursePlanDaoImpl implements CoursePlanDao{
 			
 			int rs=ps.executeUpdate();
 			if(rs>0) {
-				msg="courseplan updateStatus";
+				msg="courseplan update topic";
 			}
 			} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -173,10 +175,10 @@ public class CoursePlanDaoImpl implements CoursePlanDao{
 				int bid = rs.getInt("batchId");
 				int dNo = rs.getInt("daynumber");
 				String topic = rs.getString("topic");
-				Date date = rs.getDate("planDate");
+//				Date date = rs.getDate("planDate");
 				boolean staus = rs.getBoolean("status");
 				
-				String dt = date.toString();
+//				String dt = date.toString();
 				
 				CoursePlan course = new CoursePlan(pid, bid, dNo, topic, staus);
 				

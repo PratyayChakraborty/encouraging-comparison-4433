@@ -27,12 +27,12 @@ public class CourseDaoImpl implements CourseDao {
 		System.out.println("enter course fee");
 		int fee=sc.nextInt();
 		System.out.println("enter course CourseDesc");
-		String CourseDesc=sc.nextLine();
+		String CourseDesc=sc.next();
 		String message = ConsoleColors.RED+"Data Not Inserted..."+ConsoleColors.RESET;
 		
 		try(Connection conn = DBUtil.provConnection()){
 			
-			PreparedStatement ps = conn .prepareStatement("insert into course(courseName, courseFee, courseDesc) values(?,?,?)");
+			PreparedStatement ps = conn .prepareStatement("insert into course(courseName, Fee, courseDescription) values(?,?,?)");
 			
 			ps.setString(1,name);
 			ps.setInt(2, fee);
@@ -112,8 +112,8 @@ List<Course> courses = new ArrayList<>();
 				
 				int cid = rs.getInt("courseId");
 				String cname = rs.getString("courseName");
-				int cfee = rs.getInt("courseFee");
-				String cdesc = rs.getString("courseDesc");
+				int cfee = rs.getInt("Fee");
+				String cdesc = rs.getString("courseDescription");
 				
 				Course course = new Course(cid, cname, cfee, cdesc);
 				

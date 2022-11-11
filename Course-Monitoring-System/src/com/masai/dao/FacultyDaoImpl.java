@@ -223,11 +223,11 @@ public class FacultyDaoImpl implements FacultyDao {
 		String set=sc.next();
 		try(Connection conn=DBUtil.provConnection()){
 			
-			PreparedStatement ps=conn.prepareStatement("update faculty set ?=? where facultyid=?");
+			PreparedStatement ps=conn.prepareStatement("update faculty set "+str+" = ? where facultyid=?");
 			
-			ps.setString(1, str);
-			ps.setString(2, set);
-			ps.setInt(3, id);
+//			ps.setString(1, str);
+			ps.setString(1, set);
+			ps.setInt(2, id);
 			
 			int rs=ps.executeUpdate();
 			
@@ -270,7 +270,7 @@ public class FacultyDaoImpl implements FacultyDao {
 	}
 
 	@Override
-	public void FacultyLogin() throws FacultyException {
+	public Boolean FacultyLogin() throws FacultyException {
 		// TODO Auto-generated method stub
 		boolean flag=false;
 		Scanner sc=new Scanner(System.in);
@@ -306,8 +306,45 @@ public class FacultyDaoImpl implements FacultyDao {
 			System.out.println(ConsoleColors.RED+e.getMessage()+ConsoleColors.RESET);
 		}
 		
-//		return flag;
+		return flag;
 		
+	}
+
+	@Override
+	public String updateppssword() throws FacultyException {
+		// TODO Auto-generated method stub
+		String msg=ConsoleColors.RED+"Not updated"+ConsoleColors.RESET;
+		String str="";
+	
+		Scanner sc=new Scanner(System.in);
+		
+		str="password";
+		
+		
+		System.out.println("enter facultyid");
+		int id=sc.nextInt();
+		System.out.println("enter new"+str);
+		String set=sc.next();
+		try(Connection conn=DBUtil.provConnection()){
+			
+			PreparedStatement ps=conn.prepareStatement("update faculty set "+str+" = ? where facultyid=?");
+			
+//			ps.setString(1, str);
+			ps.setString(1, set);
+			ps.setInt(2, id);
+			
+			int rs=ps.executeUpdate();
+			
+			if (rs>0) {
+				msg=ConsoleColors.GREEN+"faculty update";
+				
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return msg;
 	}
 
 }
