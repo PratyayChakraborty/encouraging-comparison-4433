@@ -191,10 +191,56 @@ public class FacultyDaoImpl implements FacultyDao {
 //		email
 //		username
 //		password
+		String msg=ConsoleColors.RED+"Not updated"+ConsoleColors.RESET;
+		String str="";
+		System.out.println(ConsoleColors.PURPLE+"What do you want to update?"+ConsoleColors.RESET);
 		
+		System.out.println("1. facultyname");
+		System.out.println("2. facultyaddress");
+		System.out.println("3. mobile");
+		System.out.println("4. email");
+		System.out.println("5. username");
+		System.out.println("6. password");
+		Scanner sc=new Scanner(System.in);
+		int ip=sc.nextInt();
+		switch(ip) {
+		case 1:str="facultyname";
+				break;
+		case 2:str="facultyaddress";
+		break;
+		case 3:str="mobile";
+		break;
+		case 4:str="email";
+		break;
+		case 5:str="username";
+		break;
+		case 6:str="password";
+		break;
+		}
+		System.out.println("enter facultyid");
+		int id=sc.nextInt();
+		System.out.println("enter new"+str);
+		String set=sc.next();
+		try(Connection conn=DBUtil.provConnection()){
+			
+			PreparedStatement ps=conn.prepareStatement("update faculty set ?=? where facultyid=?");
+			
+			ps.setString(1, str);
+			ps.setString(2, set);
+			ps.setInt(3, id);
+			
+			int rs=ps.executeUpdate();
+			
+			if (rs>0) {
+				msg=ConsoleColors.GREEN+"faculty update";
+				
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
-		// TODO Auto-generated method stub
-		return null;
+		return msg;
 	}
 
 	@Override
