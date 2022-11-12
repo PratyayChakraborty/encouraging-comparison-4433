@@ -12,6 +12,7 @@ import java.util.Scanner;
 
 import com.masai.Extra.ConsoleColors;
 import com.masai.Model.CoursePlan;
+import com.masai.Model.Report;
 import com.masai.Utility.DBUtil;
 import com.masai.exceptions.CoursePlanException;
 
@@ -165,7 +166,7 @@ public class CoursePlanDaoImpl implements CoursePlanDao{
 	
 		try(Connection conn = DBUtil.provConnection()){
 			
-			PreparedStatement ps = conn .prepareStatement("SELECT * FROM courseplan ORDER BY daynumber");
+			PreparedStatement ps = conn .prepareStatement("SELECT * FROM courseplan");
 			
 			ResultSet rs = ps.executeQuery();
 			
@@ -175,8 +176,8 @@ public class CoursePlanDaoImpl implements CoursePlanDao{
 				int bid = rs.getInt("batchId");
 				int dNo = rs.getInt("daynumber");
 				String topic = rs.getString("topic");
-//				Date date = rs.getDate("planDate");
-				boolean staus = rs.getBoolean("status");
+
+				Boolean staus = rs.getBoolean("status");
 				
 //				String dt = date.toString();
 				

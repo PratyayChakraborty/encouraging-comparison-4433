@@ -194,14 +194,14 @@ List<Batch> batches = new ArrayList<>();
 		// TODO Auto-generated method stub
 		Scanner sc=new Scanner(System.in);
 		System.out.println("enter batchid");
-		int batchId=sc.nextInt();
+		int Id=sc.nextInt();
 String message = ConsoleColors.RED+"Batch Data Not Updated..."+ConsoleColors.RESET;
 		
 		try(Connection conn =DBUtil.provConnection()){
 			
 			PreparedStatement ps = conn.prepareStatement("delete from batch where batchId = ?");
 			
-			ps.setInt(1, batchId);
+			ps.setInt(1, Id);
 			
 			int x = ps.executeUpdate();
 			
@@ -271,11 +271,11 @@ List<Report> reports = new ArrayList<>();
 				String bid = rs.getString("batchId");
 				int cid = rs.getInt("courseId");
 				String fName = rs.getString("facultyname");
-				int sno = rs.getInt("noOfStudents");
+				int sno = rs.getInt("numberOfStudents");
 				Date date = rs.getDate("batchstartDate");
 				String dur = rs.getString("duration");
-				int pland = rs.getInt("noOfStudents");
-				int comp = rs.getInt("noOfStudents");
+				int pland = rs.getInt("planned");
+				int comp = rs.getInt("Completed");
 				
 				String sDate = date.toString();
 				

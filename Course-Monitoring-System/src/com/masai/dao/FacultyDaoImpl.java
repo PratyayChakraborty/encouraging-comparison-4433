@@ -299,7 +299,7 @@ public class FacultyDaoImpl implements FacultyDao {
 					System.out.println(ConsoleColors.RED+"Wrong Password"+ConsoleColors.RESET);
 				}
 			}else {
-				System.out.println(ConsoleColors.RED+"No Such Admin Present With this Username"+ConsoleColors.RESET);
+				System.out.println(ConsoleColors.RED+"No Such faculty Present With this Username"+ConsoleColors.RESET);
 			}
 			
 		} catch (SQLException e) {

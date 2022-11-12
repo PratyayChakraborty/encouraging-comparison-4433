@@ -1,4 +1,4 @@
-package Main;
+package com.masai.Main;
 
 import java.util.Scanner;
 
@@ -9,9 +9,8 @@ import com.masai.dao.FacultyDao;
 import com.masai.dao.FacultyDaoImpl;
 import com.masai.exceptions.AdminException;
 import com.masai.exceptions.FacultyException;
-
-import usecase.adminUseCase;
-import usecase.facultyUseCase;
+import com.masai.usecase.adminUseCase;
+import com.masai.usecase.facultyUseCase;
 
 public class Main {
 

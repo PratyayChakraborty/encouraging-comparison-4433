@@ -1,6 +1,14 @@
 package com.masai.Model;
 
 public class Report {
+	@Override
+	public String toString() {
+		return "Report [batchId=" + batchId + ", courseId=" + courseId + ", facultyFname=" + facultyFname
+				+ ", noOfStudents=" + noOfStudents + ", batchstartDate=" + batchstartDate + ", duration=" + duration
+				+ ", planned=" + planned + ", completed=" + completed + "]";
+	}
+
+
 	private String batchId;
 	private int courseId;
 	private String facultyFname;
