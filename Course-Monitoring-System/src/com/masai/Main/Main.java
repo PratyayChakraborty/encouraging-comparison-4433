@@ -48,7 +48,8 @@ public class Main {
 			} catch (AdminException e) {
 				// TODO Auto-generated catch block
 //				e.printStackTrace();
-				System.out.println("no user");
+				System.out.println(e.getMessage());
+				main(args);
 			}
 			
 			
@@ -68,6 +69,7 @@ public class Main {
 			} catch (FacultyException e) {
 				// TODO Auto-generated catch block
 				System.out.println(e.getMessage());;
+				main(args);
 			}
 			
 			
@@ -75,6 +77,7 @@ public class Main {
 			System.out.println(ConsoleColors.BANANA_YELLOW+"Application closed....See You Soon..."+ConsoleColors.RESET);
 		}else {
 			System.out.println(ConsoleColors.RED_BOLD_BRIGHT+"Unexpected value:"+ x+ConsoleColors.RESET );
+			main(args);
 		}
 
 	
