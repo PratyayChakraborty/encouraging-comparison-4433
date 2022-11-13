@@ -69,7 +69,7 @@ public class Main {
 			} catch (FacultyException e) {
 				// TODO Auto-generated catch block
 				System.out.println(e.getMessage());;
-				main(args);
+				
 			}
 			
 			

@@ -90,6 +90,7 @@ public class facultyUseCase {
 			break;	
 		}
 		case "5":{
+			System.out.println(ConsoleColors.TEAL+"Log Out Successfuly"+ConsoleColors.RESET);
 			Main.main(null);
 			break;
 		}
