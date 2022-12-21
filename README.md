@@ -2,7 +2,6 @@
 
 <h1>Course Monitoring System </h1>
 
-
 <div align="center">
 <h2> Logo:</h2>
 
@@ -27,7 +26,6 @@ So the Automated Course Monitoring System will keep the records of all the cours
 
 </p>
 
-
 <h2>Features</h2>
 <p>1.Basic authentication of various user accounts (admin, faculty).
 2.User can log in by filling in the required credentials and after the authentication, the user can enjoy the services.<br>
@@ -41,9 +39,11 @@ So the Automated Course Monitoring System will keep the records of all the cours
 3.Enjoyed the process of learning and creating the product.</p>
 
 </div>
+
 # Tech Stack
-- Java
-- MySQL
-- git
--Github
+
+-    Java
+-    MySQL
+-    git
+ -Github
 -mySqlworkbanch
