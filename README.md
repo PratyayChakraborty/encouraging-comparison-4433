@@ -45,5 +45,5 @@ So the Automated Course Monitoring System will keep the records of all the cours
 -    Java
 -    MySQL
 -    git
- -Github
--mySqlworkbanch
+- github
+- mySqlworkbanch
