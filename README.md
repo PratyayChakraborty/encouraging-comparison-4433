@@ -4,13 +4,16 @@
 
 
 <div align="center">
-## Logo:
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2wq9ZMl3MT8l2T1DuQJH_CuM0Y7Ef-0ezMcmXL62XZolgAWJxc3sNFFHm5nm5o96dP_g&usqp=CAU">
-## Flow Chart:
-<img src="https://github.com/PratyayChakraborty/encouraging-comparison-4433/blob/main/flow%20chart.png">
-## ER Diagram:
-<img src="https://github.com/PratyayChakraborty/encouraging-comparison-4433/blob/main/er%20diagram2.png">
+<h2> Logo:</h2>
 
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2wq9ZMl3MT8l2T1DuQJH_CuM0Y7Ef-0ezMcmXL62XZolgAWJxc3sNFFHm5nm5o96dP_g&usqp=CAU">
+<hr>
+<h2> Flow Chart:</h2>
+<img src="https://github.com/PratyayChakraborty/encouraging-comparison-4433/blob/main/flow%20chart.png">
+<hr>
+<h2> ER Diagram:</h2>
+<img src="https://github.com/PratyayChakraborty/encouraging-comparison-4433/blob/main/er%20diagram2.png">
+<hr>
 </div>
 
 <div>
