@@ -25,8 +25,8 @@ import com.masai.exceptions.CoursePlanException;
 import com.masai.exceptions.FacultyException;
 
 public class adminUseCase {
-		
-		public static void adminOptions() {
+
+	public static void adminOptions() {
 			Scanner sc=new Scanner(System.in);
 			System.out.println();
 			System.out.println(ConsoleColors.CYAN+"Chose option");
@@ -56,6 +56,7 @@ public class adminUseCase {
 				
 				switch (ip1) {
 				case 1: {
+					//Course operations
 					try {
 						System.out.println(c.addCourse());;
 					} catch (CourseException e) {
@@ -106,15 +107,15 @@ public class adminUseCase {
 			} 
 			
 			case 2:{
-//				Scanner sc=new Scanner(System.in);
-				
+
+				// Batch operations
 				BatchDao b=new BatchDaoImpl();
 				System.out.println(ConsoleColors.CYAN+"Chose option");
 				
 				System.out.println("1. add batch");
 				System.out.println("2. search batch by id");
 				System.out.println("3. view all batch");
-//				System.out.println("4. batch delete");
+
 				System.out.println(""+ConsoleColors.RESET);
 				
 				int ip2=sc.nextInt();
@@ -163,18 +164,7 @@ public class adminUseCase {
 					adminOptions();
 					break;
 				}
-//				case 4:{
-//					try {
-//						System.out.println(b.deleteBatch());;
-//						adminOptions();
-//					} catch (BatchException e) {
-//						// TODO Auto-generated catch block
-//						System.out.println(e.getMessage());
-//						adminOptions();
-//					}
-//					
-//					break;
-//				}	
+
 				}
 			
 				
@@ -183,12 +173,13 @@ public class adminUseCase {
 			} 
 			
 			case 3:{
+				// Faculty operations
 				System.out.println("1.add Faculty");
 				System.out.println("2.update Faculty");
 				
 				System.out.println("3. view all Faculty");
 				System.out.println("4. delete Faculty");
-//				System.out.println("5. ");
+
 				System.out.println("5. back");
 				System.out.println();
 				System.out.println("enter your choice");
@@ -200,7 +191,7 @@ public class adminUseCase {
 						System.out.println(f.addFaculty());;
 						adminOptions();
 					} catch (FacultyException e) {
-						// TODO Auto-generated catch block
+						
 						System.out.println();
 						System.out.println(ConsoleColors.RED_BACKGROUND+e.getMessage()+ConsoleColors.RESET);
 						System.out.println();
@@ -213,7 +204,7 @@ public class adminUseCase {
 						System.out.println(f.updateFacultyDetails());;
 						adminOptions();
 					} catch (FacultyException e) {
-						// TODO Auto-generated catch block
+						
 						System.out.println();
 						System.out.println(ConsoleColors.RED_BACKGROUND+e.getMessage()+ConsoleColors.RESET);
 						System.out.println();
@@ -255,8 +246,6 @@ public class adminUseCase {
 					break;
 					}
 				case 5: {
-//					adminOptions();
-//					System.out.println();
 					CourseDao c=new CourseDaoImpl();
 					adminOptions();
 					break;
@@ -269,7 +258,7 @@ public class adminUseCase {
 			} 
 			
 			case 4:{
-				
+				//batch operation
 
 				BatchDao b=new BatchDaoImpl();
 				
@@ -289,6 +278,7 @@ public class adminUseCase {
 			} 
 			
 			case 5:{
+				//CoursePlan Operation
 					CoursePlanDao c=new CoursePlanDaoImpl();
 					System.out.println();
 					System.out.println("1. add course plan");
@@ -326,7 +316,7 @@ public class adminUseCase {
 					case 3: {
 						try {
 						List<CoursePlan>cp=	c.viewAllCoursePlanDateWise();
-//						System.out.println(cp);
+
 						for (CoursePlan coursePlan : cp) {
 							System.out.println(coursePlan);
 						}
@@ -356,12 +346,12 @@ public class adminUseCase {
 			case 6:{
 				CoursePlanDao c=new CoursePlanDaoImpl();
 			try {	List<CoursePlan>cp=	c.viewAllCoursePlanDateWise();
-//				System.out.println(cp);
+/
 				for (CoursePlan coursePlan : cp) {
 					System.out.println(coursePlan);
 				}
 				} catch (CoursePlanException e) {
-					// TODO Auto-generated catch block
+					
 					System.out.println();
 					System.out.println(ConsoleColors.RED_BACKGROUND+e.getMessage()+ConsoleColors.RESET);
 					System.out.println();
@@ -372,6 +362,8 @@ public class adminUseCase {
 			} 
 		
 			case 7:{
+
+				//Report section
 						BatchDao bl=new BatchDaoImpl();
 				try {
 					
@@ -387,11 +379,7 @@ public class adminUseCase {
 						System.out.printf("%12s %8s %12s %15s %20s %11s %10s %12s", report.getBatchId(), report.getCourseId(),report.getFacultyFname(), report.getNoOfStudents(), report.getBatchstartDate(), report.getDuration(), report.getPlanned(), report.getCompleted());
 						System.out.println();
 					}
-//					for( b -> {
-//						System.out.printf("%12s %8s %12s %15s %20s %11s %10s %12s", b.getBatchId(), b.getCourseId(), b.getFacultyFname(), b.getNoOfStudents(), b.getBatchstartDate(), b.getDuration(), b.getPlanned(), b.getCompleted());
-//						System.out.println();
-//						
-//					});
+
 					System.out.println(ConsoleColors.RESET);
 					
 				} catch (BatchException e) {
@@ -409,7 +397,7 @@ public class adminUseCase {
 			case 8:{
 				Main m=new Main();
 				System.out.println();
-				System.out.println(ConsoleColors.TEAL+"Log Out Successfuly"+ConsoleColors.RESET);
+				System.out.println(ConsoleColors.TEAL+"Log Out Successfully"+ConsoleColors.RESET);
 				System.out.println();
 				m.main(null);
 				break;
@@ -418,11 +406,8 @@ public class adminUseCase {
 			
 			default:
 				System.out.println("Unexpected value:" + ip);
-//				throw new IllegalArgumentException("Unexpected value: " + ip);
+
 			}
 		}
-		
-		
-		
-		
+
 }

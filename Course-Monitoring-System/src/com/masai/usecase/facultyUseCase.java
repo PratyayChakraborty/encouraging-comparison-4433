@@ -30,15 +30,16 @@ public class facultyUseCase {
 		String ip=sc.next();
 		
 		switch (ip) {
+			//view the course plan
 		case "1": {
 			CoursePlanDao c=new CoursePlanDaoImpl();
 			try {	List<CoursePlan>c1p=c.viewAllCoursePlanDateWise();
-//				System.out.println(cp);
+
 				for (CoursePlan coursePlan : c1p) {
 					System.out.println(coursePlan);
 				}
 				} catch (CoursePlanException e) {
-					// TODO Auto-generated catch block
+					
 					System.out.println();
 					System.out.println(ConsoleColors.RED_BACKGROUND+e.getMessage()+ConsoleColors.RESET);
 					System.out.println();
@@ -48,11 +49,12 @@ public class facultyUseCase {
 				break;
 		}
 		case "2": {
+			//update the course plan
 			try {
 				System.out.println(cp.updateTopic());
 				facultyOptions();
 			} catch (CoursePlanException e) {
-				// TODO Auto-generated catch block
+				
 				System.out.println();
 				System.out.println(ConsoleColors.RED_BACKGROUND+e.getMessage()+ConsoleColors.RESET);
 				System.out.println();
@@ -60,12 +62,13 @@ public class facultyUseCase {
 			}
 			break;		
 			}
-		case "3": {
+			case "3": {
+			//update Password
 			try {
 				System.out.println(f.updateppssword());
 				facultyOptions();
 			} catch (FacultyException e) {
-				// TODO Auto-generated catch block
+				
 				System.out.println();
 				System.out.println(ConsoleColors.RED_BACKGROUND+e.getMessage()+ConsoleColors.RESET);
 				System.out.println();
@@ -74,13 +77,13 @@ public class facultyUseCase {
 			
 			break;		
 			}
-		case "4": {
+			case "4": {
+			//Course status update
 			CoursePlanDao c=new CoursePlanDaoImpl();
 			try {
 				System.out.println(c.updateStatus());
 			} catch (CoursePlanException e) {
-				// TODO Auto-generated catch block
-//				e.printStackTrace();
+
 				System.out.println();
 				System.out.println(ConsoleColors.RED_BACKGROUND+e.getMessage()+ConsoleColors.RESET);
 				System.out.println();
@@ -89,15 +92,16 @@ public class facultyUseCase {
 			facultyOptions();
 			break;	
 		}
-		case "5":{
-			System.out.println(ConsoleColors.TEAL+"Log Out Successfuly"+ConsoleColors.RESET);
+		case "5": {
+			//Log out
+			System.out.println(ConsoleColors.TEAL+"Log Out Successfully"+ConsoleColors.RESET);
 			Main.main(null);
 			break;
 		}
 		
 		default:
 			System.out.println("Unexpected value: " +ip);
-//			("Unexpected value: " +ip);
+
 			
 		}
 		
