@@ -5,7 +5,7 @@ import java.util.Scanner;
 import com.masai.Extra.ConsoleColors;
 import com.masai.dao.AdminDao;
 import com.masai.dao.AdminDaoImpl;
-
+import com.masai.dao.FacultyDao;
 import com.masai.dao.FacultyDaoImpl;
 import com.masai.exceptions.AdminException;
 import com.masai.exceptions.FacultyException;
@@ -24,7 +24,7 @@ public class Main {
 		int x = sc.nextInt();
 		if (x == 1) {
 
-			// Scanner sc=new Scanner(System.in);
+			// admin login
 			System.out.println("give username");
 			String username = sc.next();
 			System.out.println("give pasword");
@@ -50,7 +50,7 @@ public class Main {
 			}
 
 		} else if (x == 2) {
-
+			// faculty login
 			try {
 				boolean x1 = new FacultyDaoImpl().FacultyLogin();
 
@@ -70,6 +70,7 @@ public class Main {
 			}
 
 		} else if (x == 3) {
+			// Close Application
 			System.out.println(
 					ConsoleColors.BANANA_YELLOW + "Application closed....See You Soon..." + ConsoleColors.RESET);
 		} else {
