@@ -26,7 +26,7 @@ So the Automated Course Monitoring System will keep the records of all the cours
 
 </p>
 
-<h2>Features</h2>
+<h2>Features </h2>
 <p>1.Basic authentication of various user accounts (admin, faculty).
 2.User can log in by filling in the required credentials and after the authentication, the user can enjoy the services.<br>
 3.Both users have different options to perform. Admin can register faculty, and then faculty can access his/her options.<br>
