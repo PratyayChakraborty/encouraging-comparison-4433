@@ -8,7 +8,7 @@ public class CoursePlan {
 	private boolean status;
 	
 	public CoursePlan() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public CoursePlan(int planId, int batchId, int daynumber, String topic, boolean status) {

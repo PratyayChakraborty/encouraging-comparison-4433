@@ -59,7 +59,7 @@ public class FacultyDaoImpl implements FacultyDao {
 			
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		
@@ -68,7 +68,7 @@ public class FacultyDaoImpl implements FacultyDao {
 
 	@Override
 	public List<Faculty> getAllFacultyDetails() throws FacultyException {
-		// TODO Auto-generated method stub
+		
 		List<Faculty> FacultyList=new ArrayList<>();
 		
 		try(Connection conn=DBUtil.provConnection()){
@@ -93,7 +93,7 @@ public class FacultyDaoImpl implements FacultyDao {
 			
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		
@@ -131,7 +131,7 @@ public class FacultyDaoImpl implements FacultyDao {
 			
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		
@@ -175,7 +175,7 @@ public class FacultyDaoImpl implements FacultyDao {
 			
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		
@@ -184,13 +184,7 @@ public class FacultyDaoImpl implements FacultyDao {
 
 	@Override
 	public String updateFacultyDetails() throws FacultyException {
-//		String str, String set, int id
-//		facultyname
-//		facultyaddress
-//		mobile
-//		email
-//		username
-//		password
+
 		String msg=ConsoleColors.RED+"Not updated"+ConsoleColors.RESET;
 		String str="";
 		System.out.println(ConsoleColors.PURPLE+"What do you want to update?"+ConsoleColors.RESET);
@@ -236,7 +230,7 @@ public class FacultyDaoImpl implements FacultyDao {
 				
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		
@@ -245,7 +239,7 @@ public class FacultyDaoImpl implements FacultyDao {
 
 	@Override
 	public String deleteFaculty() throws FacultyException {
-		// TODO Auto-generated method stub
+		
 		String msg=ConsoleColors.RED+" Faculty Not deleted "+ConsoleColors.RESET;
 		Scanner sc=new Scanner(System.in);
 		System.out.println("enter facultyId ");
@@ -262,7 +256,7 @@ public class FacultyDaoImpl implements FacultyDao {
 			}
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		
@@ -271,7 +265,7 @@ public class FacultyDaoImpl implements FacultyDao {
 
 	@Override
 	public Boolean FacultyLogin() throws FacultyException {
-		// TODO Auto-generated method stub
+		
 		boolean flag=false;
 		Scanner sc=new Scanner(System.in);
 		System.out.println("give username");
@@ -312,7 +306,7 @@ public class FacultyDaoImpl implements FacultyDao {
 
 	@Override
 	public String updateppssword() throws FacultyException {
-		// TODO Auto-generated method stub
+		
 		String msg=ConsoleColors.RED+"Not updated"+ConsoleColors.RESET;
 		String str="";
 	
@@ -329,7 +323,7 @@ public class FacultyDaoImpl implements FacultyDao {
 			
 			PreparedStatement ps=conn.prepareStatement("update faculty set "+str+" = ? where facultyid=?");
 			
-//			ps.setString(1, str);
+
 			ps.setString(1, set);
 			ps.setInt(2, id);
 			
@@ -340,7 +334,7 @@ public class FacultyDaoImpl implements FacultyDao {
 				
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		
