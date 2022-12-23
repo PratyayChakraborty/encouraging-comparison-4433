@@ -9,7 +9,7 @@ public class Batch {
 	private String  duration ;
 	
 	public Batch() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public Batch(int batchId, int courseId, int facultyId, int numberofStudents, String batchstartDate,
